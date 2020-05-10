@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Animated} from 'react-native';
+import {Text, View, StyleSheet, Animated, TouchableHighlight} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -12,6 +12,7 @@ export class HButton extends Component {
     FontAwesomeSize: 25,
     FontAwesomeColor: '#fff',
     Text: '传入Text属性',
+    onPress:()=>{}
   };
   state = {
     scaleSize: new Animated.Value(1),
@@ -20,6 +21,7 @@ export class HButton extends Component {
     return (
       <View>
         <Animated.View style={{opacity: this.state.scaleSize}}>
+        <TouchableHighlight style={{borderRadius:10}} onPress={()=>this.props.onPress()}>
           <LinearGradient
             colors={[
               this.props.LinearGradientColor[0],
@@ -51,13 +53,14 @@ export class HButton extends Component {
               </Text>
             </View>
           </LinearGradient>
+          </TouchableHighlight>
         </Animated.View>
       </View>
     );
   }
   Press = () => {
     Animated.timing(this.state.scaleSize,{
-      toValue: 0.8,
+      toValue: 0.85,
       duration: 200,
       useNativeDriver:false
     }).start()
