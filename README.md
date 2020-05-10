@@ -1,4 +1,4 @@
-"# hongui" 
+### hongui"
 ```js
 npm i hongui -S
 ```
@@ -7,6 +7,7 @@ npm i hongui -S
 import {HButton} from 'hongui/HongUI.js';
 ```
 属性：（皆非必传）
+
 **`LinearGradientColor`** : 渐变的颜色，暂支持两个颜色，默认`['#00FA9A','#0f0']` 
 实例：`LinearGradientStart={[0, 1]}`
 **`LinearGradientStyle`**:容器的样式设置 默认为空{}
