@@ -4,9 +4,9 @@ npm i hongui -S
 ```
 安装包后，导入包，导出HButton组件
 ```js
-import {HButton} from '../../components/HongUI/HongUI';
+import {HButton} from 'hongui/HongUI.js';
 ```
-属性：
+属性：（皆非必传）
 **`LinearGradientColor`** : 渐变的颜色，暂支持两个颜色，默认`['#00FA9A','#0f0']` 
 实例：`LinearGradientStart={[0, 1]}`
 **`LinearGradientStyle`**:容器的样式设置 默认为空{}
@@ -32,4 +32,4 @@ import FontAwesome from 'react-native-vector-icons/Ionicons';
 
 **`Text`** ：** 需要传入的文字
 
-**`TextStyle`** : 传入文字的样式 非必填
+**`TextStyle`** : 传入文字的样式
